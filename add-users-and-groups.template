@@ -7,7 +7,7 @@
     "testuser": {
       "Type": "AWS::IAM::User",
       "Properties": {
-        "Path": "/"
+        "Path": "/",
         "UserName": "testuser"
       }
     },
