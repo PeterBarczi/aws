@@ -8,7 +8,7 @@
       "Type": "AWS::IAM::User",
       "Properties": {
         "Path": "/",
-        "UserName": "testuser"
+        "UserName": "testuser",
         "LoginProfile": { 
           "Password": "Start123"
 	  }
