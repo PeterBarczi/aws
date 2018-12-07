@@ -9,6 +9,9 @@
       "Properties": {
         "Path": "/",
         "UserName": "testuser"
+        "LoginProfile": { 
+          "Password": "Start123"
+	  }
       }
     },
 
