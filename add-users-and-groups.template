@@ -1,0 +1,46 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Add an Admin group and Users.",
+
+  "Resources": {
+
+    "testuser": {
+      "Type": "AWS::IAM::User",
+      "Properties": {
+        "Path": "/"
+      }
+    },
+
+    "AdminUsers": {
+      "Type": "AWS::IAM::Group",
+      "Properties": {
+        "Path": "/"
+      }
+    },
+
+    "AdminUserMembership": {
+      "Type": "AWS::IAM::UserToGroupAddition",
+      "Properties": {
+        "GroupName": { "Ref": "AdminUsers" },
+        "Users": [ { "Ref": "testuser" } ]
+      }
+    },
+
+    "ExplicitAdmin": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "Groups": [ { "Ref": "AdminUsers" } ],
+        "PolicyName": "admin-policy",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [ {
+            "Action": "*",
+            "Effect": "Allow",
+            "Resource": "*"
+          } ]
+        }
+      }
+    }
+
+  }
+}
