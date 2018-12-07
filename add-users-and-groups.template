@@ -15,7 +15,8 @@
     "AdminUsers": {
       "Type": "AWS::IAM::Group",
       "Properties": {
-        "Path": "/"
+        "Path": "/",
+        "GroupName": "AdminUsers"
       }
     },
 
