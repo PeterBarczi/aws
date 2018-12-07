@@ -8,6 +8,7 @@
       "Type": "AWS::IAM::User",
       "Properties": {
         "Path": "/"
+        "UserName": "testuser"
       }
     },
 
