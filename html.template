@@ -6,15 +6,16 @@ yum install httpd -y
 cat <<EOF > /var/www/html/index.html
 <!DOCTYPE html>
 <html>
-<head>
-<title>Welcome!</title>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+	<title>Welcome!</title>
+    </head>
+ <body>
 
-<h1>under construction...</h1>
-<p>...........................</p>
+   <h1>under construction...</h1>
+   <p>...........................</p>
 
-</body>
+  </body>
 </html>
 EOF
 
